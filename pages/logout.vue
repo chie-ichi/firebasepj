@@ -13,7 +13,7 @@ export default {
         logout() {
             firebase
             .auth()
-            .sighOut()
+            .signOut()
             .then(() => {
                 this.$router.replace('/')
             })
