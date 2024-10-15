@@ -1,0 +1,23 @@
+<template>
+    <div class="logout">
+        <button @click="logout">ログアウト</button>
+        <br>
+        <NuxtLink to="/">戻る</NuxtLink>
+    </div>
+</template>
+
+<script>
+import firebase from '~/plugins/firebase'
+export default {
+    methods: {
+        logout() {
+            firebase
+            .auth()
+            .sighOut()
+            .then(() => {
+                this.$router.replace('/')
+            })
+        },
+    },
+}
+</script>
