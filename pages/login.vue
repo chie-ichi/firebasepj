@@ -37,6 +37,7 @@ export default {
                 this.$router.push('/')
             })
             .catch((error) => {
+                console.error('Login error:', error); // エラーをコンソールに表示
                 switch (error.code) {
                     case 'auth/invalid-email':
                         alert('メールアドレスの形式が違います')
