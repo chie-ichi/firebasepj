@@ -38,6 +38,7 @@ export default {
             })
             .catch((error) => {
                 console.error('Login error:', error); // エラーをコンソールに表示
+                alert(`エラー: ${error.message}`);
                 switch (error.code) {
                     case 'auth/invalid-email':
                         alert('メールアドレスの形式が違います')
